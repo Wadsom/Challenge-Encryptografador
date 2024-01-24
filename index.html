@@ -25,13 +25,16 @@
             <legend class="msgAlert">Apenas letras minúsculas e sem acento.</legend>
          </div>
          <section class="btn-container">
-            <input type="button" onclick="btnAction()" value="Encryptando" name="btnEncryt" />
-            <input type="button" value="">
+            <input type="button" onclick="btnActionEncrypt()" value="Encryptando" name="btnEncryt" />
+            <input type="button" onclick="btnActionDescrypt()" value="Descryptando">
          </section>
    </section>
    <section class="resultCryptografia">
       <aside class="txtStringCryptograf">
-         <h1 class="resultTxt" id="resultTxt" >Aqui deve ter o resultado do texto</h1>
+         <textarea class="resultTxt" cols="20" rows="10" id="resultTxt" placeholder='Aqui deve ter o resultado do texto' disabled ></textarea>
+         <div class="btnCopiarResult">
+            <button type="button" class="btnCopiar">Copiar</button>
+         </div>
       </aside>
    </section>
 

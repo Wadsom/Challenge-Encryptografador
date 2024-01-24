@@ -13,6 +13,7 @@ function encryptografando(msgDesencryptada) {
       if (msgDesencryptada.includes(codeFonte[i][0])) {
          //Aqui ele ira reescrever a mensagem substituindo as letras da mensagem pelas letras criptografadas
          msgDesencryptada = msgDesencryptada.replaceAll(codeFonte[i][0], codeFonte[i][1]);
+         console.log(msgDesencryptada);
       } else {
          alert('Ocorreu um erro na cryptografia, verifique se seu texto atende a todos os requisitos necessários!');
          return;
@@ -20,22 +21,55 @@ function encryptografando(msgDesencryptada) {
    }
    return msgDesencryptada;
 }
-function btnAction() {
+function btnActionEncrypt() {
    let txtArea = document.getElementById('txtArea');
    console.log(txtArea.value);
    console.log(resultMsg);
    const msgCryptada = encryptografando(txtArea.value);
-   console.log(msgCryptada);
+   console.log(`Está é a mensagem encrypitada:  ${msgCryptada}`);
    if (msgCryptada.length === 0 || /^\s+$/.test(msgCryptada)) {
       msgAlert.classList.add('font-size:90px;');
       txtArea.innerHTML = '';
-      msgAlert.innerHTML = "Este campo não pode estar vazio, informe a mensagem que deseja que seja cryptografada";
-   } else if (!txtArea) {
-       return; 
+      txtArea.innerHTML = "Este campo não pode estar vazio, informe a mensagem que deseja que seja cryptografada";
+   } else if (/[^a-z ]/.test(msgCryptada)) {
+
+      alert('Algum erro foi detectado');
    } else {
-      txtArea.innerHTML = ' ';
       resultMsg.innerHTML = msgCryptada;
    }
 
 }
+function btnActionDescrypt() {
+   let txtArea = document.getElementById('txtArea');
+   console.log(txtArea.value);
+   console.log(resultMsg);
+   const msgCryptada = descryptografando(txtArea.value);
+   console.log(`Está é a mensagem encrypitada:  ${msgCryptada}`);
+   if (msgCryptada.length === 0 || /^\s+$/.test(msgCryptada)) {
+      msgAlert.classList.add('font-size:90px;');
+      txtArea.innerHTML = '';
+      txtArea.innerHTML = "Este campo não pode estar vazio, informe a mensagem que deseja que seja cryptografada";
+   } else if (/[^a-z ]/.test(msgCryptada)) {
 
+      alert('Algum erro foi detectado');
+   } else {
+      resultMsg.innerHTML = msgCryptada;
+   }
+}
+function descryptografando(msgEncryptada) {
+   //Lista de parametros de comparação da Matrix de Code
+   const codeFonte = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+   ;
+   //Aqui eu faço com que meu array seja percorrido e fazendo uma comparação das letras do msgEncryptada
+   for (let i = 0; i < codeFonte.length; i++) {
+      if (msgEncryptada.includes(codeFonte[i][1])) {
+         //Aqui ele ira reescrever a mensagem substituindo as letras da mensagem  criptografadas pelas letras traduzidas
+         msgEncryptada = msgEncryptada.replaceAll(codeFonte[i][1], codeFonte[i][0]);
+         console.log(msgEncryptada);
+      } else {
+         alert('Ocorreu um erro na cryptografia, verifique se seu texto atende a todos os requisitos necessários!');
+         return;
+      }
+   }
+   return msgEncryptada;
+}

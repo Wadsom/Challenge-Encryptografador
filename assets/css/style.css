@@ -1,7 +1,10 @@
 * {
   padding: 0;
   margin: 0;
-
+  font-family: "Inter";
+  font-weight: 100;
+  font-size:20px;
+  line-height: 150%;
   background-color: var(--Light-blue-light-blue-100, #f3f5fc);
 }
 .resultCryptografia {
@@ -24,10 +27,14 @@ body {
   height: 1024px;
   display: flex;
   padding: 5px;
-  
 }
-.container{
-   justify-content: space-between;
+main{
+   display: flex;
+    margin-bottom: 10px;
+    margin-left: 180px;
+}
+.container {
+  justify-content: space-between;
   flex-direction: row;
   box-sizing: border-box;
 }
