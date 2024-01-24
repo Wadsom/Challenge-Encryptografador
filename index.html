@@ -6,7 +6,6 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Challenge Encryptador - ONE/Alura</title>
    <link rel="stylesheet" href="./assets/css/style.css">
-   <script src="/assets/js/main.js"></script>
 </head>
 
 <body>
@@ -18,28 +17,29 @@
    <section class="container">
       <main>
          <section class="txtArea">
-            <textarea name="txtArea" id="txtArea" cols="30" rows="10"
+            <textarea name="txtArea" id="txtArea" class="txtArea" cols="30" rows="10"
                placeholder="Digite seu texto que você deseje que seja codificado"></textarea>
          </section>
          <div class="alert">
             <img src="/assets/img/alertIcon.png" alt="Alert">
-            <legend>Apenas letras minúsculas e sem acento.</legend>
+            <legend class="msgAlert">Apenas letras minúsculas e sem acento.</legend>
          </div>
          <section class="btn-container">
-            <input type="button" onclick="" value="" name="btnEncryt" />Ecn
+            <input type="button" onclick="btnAction()" value="Encryptando" name="btnEncryt" />
             <input type="button" value="">
          </section>
-      </section>
-        <section class="resultCryptografia">
-         <aside class="txtStringCryptograf">
-          <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eos ab corrupti doloribus fuga reprehenderit sed, hic pariatur ipsa repellendus sunt eligendi qui iste autem! Inventore ad quos totam maiores?</h1>
-         </aside>
-        </section>
+   </section>
+   <section class="resultCryptografia">
+      <aside class="txtStringCryptograf">
+         <h1 class="resultTxt" id="resultTxt" >Aqui deve ter o resultado do texto</h1>
+      </aside>
+   </section>
 
 
 
-      </main>
-   
+   </main>
+   <script src="/assets/js/main.js"></script>
+
 </body>
 
 </html>
