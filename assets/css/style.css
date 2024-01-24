@@ -1,14 +1,34 @@
 * {
   padding: 0;
   margin: 0;
+
   background-color: var(--Light-blue-light-blue-100, #f3f5fc);
+}
+.resultCryptografia {
+  background-color: #0a3871;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 400px;
+  height: 944px;
+  flex-shrink: 0;
+  border-radius: 32px;
+  background: var(--White, #fff);
+
+  /* shadow */
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
 }
 body {
   width: 1440px;
   height: 1024px;
   display: flex;
   padding: 5px;
-  justify-content: space-between;
+  
+}
+.container{
+   justify-content: space-between;
+  flex-direction: row;
   box-sizing: border-box;
 }
 .header-container {
@@ -22,4 +42,14 @@ header img {
   width: 120px;
   height: 48px;
   align-items: center;
+}
+.container {
+  width: 680px;
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25rem;
+  font-size: 32px;
+  color: var(--Dark-blue-dark-blue-300, #0a3871);
 }
