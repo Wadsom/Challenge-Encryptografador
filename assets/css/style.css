@@ -3,60 +3,128 @@
   margin: 0;
   font-family: "Inter";
   font-weight: 100;
-  font-size:20px;
+  font-size: 20px;
   line-height: 150%;
   background-color: var(--Light-blue-light-blue-100, #f3f5fc);
 }
-.resultCryptografia {
-  background-color: #0a3871;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  width: 400px;
-  height: 944px;
-  flex-shrink: 0;
-  border-radius: 32px;
-  background: var(--White, #fff);
 
-  /* shadow */
-  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-}
 body {
   width: 1440px;
   height: 1024px;
   display: flex;
+  box-sizing: border-box;
+  background-color: var(--Light-blue-light-blue-100, #f3f5fc);
   padding: 5px;
 }
-main{
-   display: flex;
-    margin-bottom: 10px;
-    margin-left: 180px;
+main {
+  background-color: var(--Light-blue-light-blue-100, #f3f5fc);
+  display: flex;
+  margin-bottom: 10px;
+  margin-left: 220px;
+  flex-direction: column;
+  margin-top: 49px;
+  border-radius: 66px;
+}
+.txtArea {
+  height: 710px;
+  width: 800px;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  padding-bottom:10px ;
+  margin: 10px;
+}
+.txtStringCryptograf textarea {
+    justify-content: center;
+    margin-top:130px;
+    display: flex;
+    width: 220px;
+    height: 680px;
+    font-size: 17px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.btnEncryt {
+  margin-right: 10px;
+  background-color: #0a3871;
+  color: #f3f5fc;
+  margin: 0 100px;
+  border: #f3f5fc;
+  border-radius: 10px;
+  height: 60px;
+  width: 200px;
+}
+
+.btnDescryt {
+  background-color: #0a3871;
+  color: #f3f5fc;
+  margin: 0 100px;
+  border: #f3f5fc;
+  border-radius: 10px;
+  height: 60px;
+  width: 200px;
+}
+.btnCopiar {
+    background-color: #0a3871;
+    color: #f3f5fc;
+    margin: 0 100px;
+    border: #f3f5fc;
+    border-radius: 10px;
+    height: 60px;
+    width: 200px;
 }
 .container {
-  justify-content: space-between;
-  flex-direction: row;
-  box-sizing: border-box;
+  width: 680px;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  padding-right: 240px;
+  border: none;
+  border-radius: 24px;
+  background-color: var(--Light-blue-light-blue-100, #f3f5fc);
+  color: #0a3871;
+  margin-left: 98px;
+  margin-top: 20px;
+  padding-left: 20px;
 }
+
+.resultTxt {
+  height: 730px;
+  margin-top: 10px;
+  background: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 10px;
+  border: none;
+  border-radius: 24px;
+  color: #0a3871;
+  margin-left: 98px;
+  margin-top: 74px;
+  padding-left: 20px;
+}
+
 .header-container {
   width: 600vw;
   height: 3vw;
   padding: 25px 15px;
-  background-color: rgb(226, 226, 251);
   align-items: center;
+  justify-content: center;
 }
 header img {
   width: 120px;
   height: 48px;
   align-items: center;
 }
-.container {
-  width: 680px;
-  background-color: antiquewhite;
-  display: flex;
+
+.txtStringCryptograf textarea{
   justify-content: center;
-  align-items: center;
-  padding: 25rem;
-  font-size: 32px;
-  color: var(--Dark-blue-dark-blue-300, #0a3871);
+  display: flex;
+  background-image: '/assets/img/boneca.png';
+}
+.msgAlert{
+  margin-top: 10px;
 }
